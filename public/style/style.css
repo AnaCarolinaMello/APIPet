@@ -1,0 +1,22 @@
+/* body{
+    background-color: rgb(100, 99, 99);
+} */
+
+#form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+
+button{
+    margin-top: 5px;
+    flex-direction: row;
+    align-self: center;
+    padding: 7px 20px;
+}
+
+#titulo{
+    color: rebeccapurple;
+}
