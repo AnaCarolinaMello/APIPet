@@ -49,7 +49,7 @@ app.post('/index', (req,res) =>{
     </head>
     <body>
         <main>
-            <label><% ${nome}%></label>     
+            <label><${nome}></label>     
         </main>
     </body>
     </html>`)

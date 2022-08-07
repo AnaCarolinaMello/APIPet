@@ -16,39 +16,84 @@
 </head>
 <body>
     <main>
-        <h1 id="titulo">Cadastro de animal</h1>
-
             <form action="/index" id="form" method="post">
-                <label for="">Nome do animal</label>
-                <input type="text" value='' name="nomeDoAnimal" >
+                <h1 id="titulo">Cadastro de animal</h1>
+                    <label for="">Nome do animal:</label>
+                    <input type="text" name="nomeDoAnimal" required autocomplete="off">
+        
+                    <label for="">Idade do animal:</label>
+                    <input type="number" name="idadeDoAnimal" required autocomplete="off" min="0">
     
-                <label for="">Idade do animal</label>
-                <input type="number" id="idadeDoAnimal" >
-
-                <label for="">Peso do animal</label>
-                <input type="text" id="pesoDoAnimal" >
-
-                <label for="">Porte do animal</label>
-                <input type="text" id="porteDoAnimal" >
-
-                <label for="">Raça do animal(opcional)</label>
-                <input type="text" id="racaDoAnimal">
+                    <label for="">Peso do animal:</label>
+                    <input type="number" name="pesoDoAnimal" required autocomplete="off" min="0">
     
-                <label for="">Descrição do animal</label>
-                <input type="text" id="descricaoDoAnimal" >
-
-                <label for="">Vacinas:</label><br>
-                <label for="">Raiva:</label>
-                <input type="checkbox" id="raiva">
+                    <label for="">Porte do animal:</label>
+                    <input type="text" name="porteDoAnimal" required autocomplete="off" >
+        
+                    <label for="">Descrição do animal:</label>
+                    <input type="text" name="descricaoDoAnimal" required autocomplete="off">
     
-                <div id="buttons">
-                    <button type="submit" id="Submit">Confirmar</button>
-                    <button type="reset" id="Reset">Limpar</button>
-                </div>
+                    <label for="">Raça do animal(opcional):</label>
+                    <input type="text" name="racaDoAnimal">
+    
+    
+        
+                    <!-- <table id="vacinasGatos">
+                        <tr>
+                            <th id="vacinasG">Vacinas para gato</th>
+                        </tr>
+                        <tr>
+                            <td>V3</td>
+                            <td id="checks"><input type="checkbox" name="V3" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>V4</td>
+                            <td id="checks"><input type="checkbox" name="V4" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>V5</td>
+                            <td id="checks"><input type="checkbox" name="V5" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Antirrábica</td>
+                            <td id="checks"><input type="checkbox" name="Raiva" id=""></td>
+                        </tr>
+                        
+                    </table> -->
+                    <!-- <table id="vacinasCachorros">
+                        <tr>
+                            <th id="vacinasG">Vacinas para gato</th>
+                        </tr>
+                        <tr>
+                            <td>V3</td>
+                            <td id="checks"><input type="checkbox" name="V3" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>V4</td>
+                            <td id="checks"><input type="checkbox" name="V4" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>V5</td>
+                            <td id="checks"><input type="checkbox" name="V5" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Antirrábica</td>
+                            <td id="checks"><input type="checkbox" name="Raiva" id=""></td>
+                        </tr> -->
+                        
+                    </table>
+    
+    
+    
+                    <div id="buttons">
+                        <button id="Submit">Confirmar</button>
+                        <button id="Reset">Limpar</button>
+                    </div>
             </form>    
 
             <img src="<%= gato %>" alt="">
             <img src="<%= cao %>" alt="">     
+            <script src="./public/script.js"></script>
     </main>
 </body>
 </html>
