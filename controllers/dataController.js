@@ -1,5 +1,5 @@
 const data = require('../models/dataModels')
-const dataCao = require('../models/dataCao')
+const dataCao = require('../models/dataFichas')
 const ax = require('axios')
 
 exports.getGatos = async (req,res) =>{
@@ -10,10 +10,7 @@ exports.getGatos = async (req,res) =>{
 
 exports.getCao = async (req,res) =>{
 
-    var cao= await dataCao.returnCao()
+    var cao= await data.returnCao()
     res.render('index',{cao: cao,gato:null})
     console.log(cao)
 }
-
-
-

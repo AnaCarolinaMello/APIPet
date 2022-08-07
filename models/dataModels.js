@@ -11,17 +11,12 @@ exports.returnGatos = ()=>{
     })
 }
 
-
-// exports.returnCao = ()=>{
-//     return axios
-//     .get("https://random.dog/woof.json")
-//     .then(data=>{
-//         console.log(data)
-//         var requeste= []
-//         var caes = data.data.url
-//         requeste = caes.map(cao =>{
-//             return cao;
-//         })
-//         return requeste
-//     })
-// }
+exports.returnCao = ()=>{
+    return axios
+    .get("https://random.dog/woof.json")
+    .then(data=>{
+        console.log(data)
+        var requeste = data.data.url
+        return requeste
+    })
+}

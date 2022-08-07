@@ -11,8 +11,6 @@ router.get('route.js', (req, res, next)=>{
     res.render('route',{
         cao: caes,
         gato:gatos
-        
-
     });
 });
 

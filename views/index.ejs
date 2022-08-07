@@ -19,16 +19,26 @@
 
             <form action="" id="form">
                 <label for="">Nome do animal</label>
-                <input type="text" id="nomeDoAnimal">
+                <input type="text" id="nomeDoAnimal" required>
     
                 <label for="">Idade do animal</label>
-                <input type="number" id="idadeDoAnimal">
+                <input type="number" id="idadeDoAnimal" required>
+
+                <label for="">Peso do animal</label>
+                <input type="text" id="pesoDoAnimal" required>
+
+                <label for="">Porte do animal</label>
+                <input type="text" id="porteDoAnimal" required>
     
-                <label for="">Raça do animal</label>
+                <label for="">Descrição do animal</label>
+                <input type="text" id="descricaoDoAnimal" required>
+
+                <label for="">Raça do animal(opcional)</label>
                 <input type="text" id="racaDoAnimal">
 
-                <label for="">Vacinas:</label>
-                <input type="text" id="vacinasDoAnimal">
+                <label for="">Vacinas:</label><br>
+                <label for="">Raiva:</label>
+                <input type="checkbox" id="raiva">
     
                 <div id="buttons">
                     <button id="Submit">Confirmar</button>
@@ -38,10 +48,8 @@
 
             <img src="<%= gato %>" alt="">
             <img src="<%= cao %>" alt="">
+        <script src="./public/script.js"></script>
         
-            
-
-
     </main>
 </body>
 </html>
