@@ -28,6 +28,7 @@ app.post('/index',async(req,res,next) =>{
         const idade = req.body.idadeDoAnimal;
         const peso = req.body.pesoDoAnimal;
         const porte = req.body.porteDoAnimal;
+        const descricao = req.body.descricaoDoAnimal;
         const raca = req.body.racaDoAnimal;
         const data = JSON.parse(await fs.readFileSync(global.fileName));
 
@@ -37,6 +38,7 @@ app.post('/index',async(req,res,next) =>{
             idade: idade,
             peso: peso,  
             porte: porte,
+            descricao: descricao,
             raca: raca
         }
         data.fichas.push(ficha)
@@ -74,9 +76,34 @@ app.delete("/:id", async (req,res,next) =>{
         data.fichas = data.fichas.filter(
             fichas => fichas.id !== parseInt(req.params.id)
         );
-        await fs.writeFileSync(global.fileName, JSON.stringify(data, null, 2));        
+        await fs.writeFileSync(global.fileName, JSON.stringify(data, null, 2));  
+        res.send("Ficha deletada com sucesso")      
         res.end();
-        console.log("Pet deletado")
+        console.log(`Ficha deletada`)
+    }catch(err){
+        next(err)
+    }
+})
+
+app.put('/:id', async (req,res,next) =>{
+    try{
+        const ficha = req.body;
+        if (!ficha.nome || !ficha.idade || !ficha.porte || !ficha.peso || !ficha.descricao == null) {
+            res.send("Dados obrigatórios faltando");
+        }
+
+        const data = JSON.parse(await fs.readFileSync(global.fileName));
+        const index = data.fichas.findIndex(a => a.id === parseInt(req.params.id));
+
+        if (index === -1) {
+            res.send("Animal inexistente");
+        }
+        data.fichas[index].nome = ficha.nome;
+        data.fichas[index].idade = ficha.idade;
+        data.fichas[index].porte = ficha.porte;
+        data.fichas[index].peso = ficha.peso;
+        data.fichas[index].descricao = ficha.descricao;
+        data.fichas[index].raca = ficha.raca;
     }catch(err){
         next(err)
     }
