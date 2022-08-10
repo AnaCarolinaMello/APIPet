@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'views')));
 app.use('/public', express.static('public'))
 
-global.fileName = "teste.json";
+global.fileName = "fichas.json";
 // const { readFile, writeFile} = fs;
 //var id = 1;
 
@@ -48,7 +48,6 @@ global.fileName = "teste.json";
 //     </body>
 //     </html>`)
 // })
-let id = 1;
 
 app.post('/index',async(req,res,next) =>{
     try{
@@ -61,14 +60,14 @@ app.post('/index',async(req,res,next) =>{
         const data = JSON.parse(await fs.readFileSync(global.fileName));
 
         const ficha = {
-            id: id,
+            id: data.nextId++,
             nome: nome,
             idade: idade,
             peso: peso,  
             porte: porte,
             raca: raca
         }
-        id = id+1
+        // console.log(id)
         data.fichas.push(ficha)
         await fs.writeFileSync(global.fileName,JSON.stringify(data, null, 2))
         res.send(ficha)
@@ -77,6 +76,7 @@ app.post('/index',async(req,res,next) =>{
         next(err)
     }
 });
+
 
 // app.post('/models/dataFicha', function(req, res) {
     

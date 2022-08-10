@@ -1,7 +1,8 @@
 const data = require('../models/dataModels')
 const dataFicha = require('../models/dataFichas')
 const ax = require('axios')
-var fs = require("fs")
+const fs = require("fs")
+global.fileName = "teste.json";
 
 exports.getGatos = async (req,res) =>{
 
@@ -16,6 +17,7 @@ exports.getCao = async (req,res) =>{
     console.log(cao)
 }
 
+// exports.getFichas = async
 // exports.getFichas = async (req,res) =>{
 
 //     var ficha = fs.readFile('./models.dataFichas.js')

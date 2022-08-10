@@ -6,7 +6,7 @@ const dataController = require("../controllers/dataController");
 app.use(express.json());
 const fs = require('fs')
 app.use(bodyParser.json());
-global.fileName = "dataFichas.json";
+global.fileName = "teste.json";
 const { readFile, writeFile} = fs;
 var id = 1;
 // const gato = require("../models/dataModels")
