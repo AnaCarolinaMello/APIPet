@@ -16,80 +16,38 @@
 </head>
 <body>
     <main>
-            <form action="/index" id="form" method="post">
-                <h1 id="titulo">Cadastro de animal</h1>
-                    <label for="">Nome do animal:</label>
-                    <input type="text" name="nomeDoAnimal" required autocomplete="off">
-        
-                    <label for="">Idade do animal:</label>
-                    <input type="number" name="idadeDoAnimal" required autocomplete="off" min="0">
+        <div id="container">
+            <center><h1 id="titulo">Cadastro de animal</h1> </center>
+                <form action="/index" id="form" method="post">
+                    <header>
     
-                    <label for="">Peso do animal:</label>
-                    <input type="number" name="pesoDoAnimal" required autocomplete="off" min="0">
+                        <label for="">Nome do animal:</label>
+                        <label for="">Idade do animal:</label>
+                        <input type="text" name="nomeDoAnimal" required autocomplete="off">
+                        <input type="number" name="idadeDoAnimal" required autocomplete="off" min="0">
     
-                    <label for="">Porte do animal:</label>
-                    <input type="text" name="porteDoAnimal" required autocomplete="off" >
-        
-                    <label for="">Descrição do animal:</label>
-                    <input type="text" name="descricaoDoAnimal" required autocomplete="off">
+                        <label for="">Peso do animal:</label>
+                        <label for="">Porte do animal:</label>
+                        <input type="number" name="pesoDoAnimal" required autocomplete="off" min="0">
+                        <input type="text" name="porteDoAnimal" required autocomplete="off" >
     
-                    <label for="">Raça do animal(opcional):</label>
-                    <input type="text" name="racaDoAnimal">
+                        <label for="">Descrição do animal:</label>
+                        <label for="">Raça do animal(opcional):</label>
+                        <input type="text" name="descricaoDoAnimal" required autocomplete="off">
+                        <input type="text" name="racaDoAnimal" autocomplete="off">
     
-    
-        
-                    <!-- <table id="vacinasGatos">
-                        <tr>
-                            <th id="vacinasG">Vacinas para gato</th>
-                        </tr>
-                        <tr>
-                            <td>V3</td>
-                            <td id="checks"><input type="checkbox" name="V3" id=""></td>
-                        </tr>
-                        <tr>
-                            <td>V4</td>
-                            <td id="checks"><input type="checkbox" name="V4" id=""></td>
-                        </tr>
-                        <tr>
-                            <td>V5</td>
-                            <td id="checks"><input type="checkbox" name="V5" id=""></td>
-                        </tr>
-                        <tr>
-                            <td>Antirrábica</td>
-                            <td id="checks"><input type="checkbox" name="Raiva" id=""></td>
-                        </tr>
-                        
-                    </table> -->
-                    <!-- <table id="vacinasCachorros">
-                        <tr>
-                            <th id="vacinasG">Vacinas para gato</th>
-                        </tr>
-                        <tr>
-                            <td>V3</td>
-                            <td id="checks"><input type="checkbox" name="V3" id=""></td>
-                        </tr>
-                        <tr>
-                            <td>V4</td>
-                            <td id="checks"><input type="checkbox" name="V4" id=""></td>
-                        </tr>
-                        <tr>
-                            <td>V5</td>
-                            <td id="checks"><input type="checkbox" name="V5" id=""></td>
-                        </tr>
-                        <tr>
-                            <td>Antirrábica</td>
-                            <td id="checks"><input type="checkbox" name="Raiva" id=""></td>
-                        </tr> -->
-                        
-                    </table>
+                    </header>
+                
     
     
-    
+                    <center>
                     <div id="buttons">
                         <button id="Submit">Confirmar</button>
                         <button id="Reset">Limpar</button>
                     </div>
-            </form>    
+                    </center>
+            </form>  
+            </div>  
 
             <img src="<%= gato %>" alt="">
             <img src="<%= cao %>" alt="">     

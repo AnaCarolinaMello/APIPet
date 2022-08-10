@@ -1,30 +1,51 @@
-/* body{
-    background-color: rgb(100, 99, 99);
-} */
+body{
+    background-color: #383838;
+}
 
-#form{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 40px;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 25px;
-    padding-top: 0px;
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: header;
+}
+
+section{
+    grid-area: section;
+    border: solid;
+}
+
+table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header" "header" "section" "section";
 
 }
 
 input{
+    width: 80%;
     border-radius: 6px;
     border: 1.5px solid black;
     padding: 6px;
+    background-color:#727272;
+    margin-bottom: 10px;
 }
 
 label{
     font-size: large;
     font-weight: bold;
-    margin-top: 10px;
+    color: white;
+}
+
+
+#container{
+    border: solid #4e4e4e 2px;
+    padding: 20px;
+    border-radius: 6px;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #4e4e4e;
 }
 
 button{
@@ -34,49 +55,38 @@ button{
     border: 1px solid black;
     align-self: center;
     padding: 7px 20px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-right: 25px;
     font-size: large;
 }
 
-#Submit:hover{
-    background-color: rgb(32, 175, 32);
-    transition: 0.3s;
-}
-
 #Submit{
-    background-color: rgb(70, 197, 70);
+    background-color: rgb(82, 159, 230);
     color: white;
 }
 
+#Submit:hover{
+    background-color: rgb(66, 140, 209);
+    transition: 0.3s;
+}
+
 #Reset{
-    background-color: rgb(224, 64, 64);
+    background-color: rgb(126, 126, 126);
     color: white;
 }
 
 #Reset:hover{
-    background-color: rgb(212, 31, 31);
+    background-color: rgb(112, 112, 112);
     transition: 0.3s;
 }
 
 #titulo{
-    color: rebeccapurple;
-}
+    color: rgb(138, 203, 233);
+};
 
-
-table{
-    border: 1px solid black;
-    margin-top: 5px;
-}
-
-th{
-    width: 185px;
-}
-
-tr{
-    border: 1px solid black;
-}
-
-td{
-    width: 10px;
-    border: 1px solid black;
+img{
+    width: max-content 30px;
+    max-height: 30px;
+    z-index: -2;
+    position: absolute;
 }

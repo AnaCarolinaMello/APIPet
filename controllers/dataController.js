@@ -17,9 +17,16 @@ exports.getCao = async (req,res) =>{
     console.log(cao)
 }
 
-// exports.getFichas = async
-// exports.getFichas = async (req,res) =>{
+exports.getFichas = async (req,res) =>{
 
-//     var ficha = fs.readFile('./models.dataFichas.js')
-//     res.render('ficha',{ficha:ficha})
-// }
+    var data = await fs.readFile(global.fileName)
+    res.render('ficha',{
+        id: data.id,
+        nome: data.nome,
+        idade: data.idade,
+        peso: data.peso,  
+        porte: data.porte,
+        raca: data.raca
+    })
+    console.log(data)
+}
