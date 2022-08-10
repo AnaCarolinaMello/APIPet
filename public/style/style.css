@@ -23,10 +23,17 @@ table{
 input{
     width: 80%;
     border-radius: 6px;
-    border: 1.5px solid black;
+    border: 1.5px solid rgb(73, 73, 73);
     padding: 6px;
     background-color:#727272;
     margin-bottom: 10px;
+    outline: none;
+    color: white;
+}
+
+input:focus{
+    background-color:#a1a1a1;
+    border: 1.5px solid rgb(105, 105, 105);
 }
 
 label{
@@ -58,6 +65,7 @@ button{
     margin-top: 20px;
     margin-right: 25px;
     font-size: large;
+    border: none;
 }
 
 #Submit{
