@@ -1,5 +1,5 @@
 
-Minha API casdrata fichas de animais ni sistema e consome uma API para gerar imagens de gatos
+Minha API casdrata fichas de animais no sistema e consome uma API para gerar imagens de gatos
 
 Dependências que devem ser baixadas para o programa funcionar:
 
