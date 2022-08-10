@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../public/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <style>
+        img{
+            max-width: 400px;
+            max-height: 400px;
+            position: absolute;
+            top: 60%;
+            left: 40%;
+        }
+    </style>
     <script>
         function reset() {
             let reset = document.getElementById("Reset")
@@ -46,11 +55,11 @@
                         <button id="Reset">Limpar</button>
                     </div>
                     </center>
-            </form>  
+                </form>  
             </div>  
 
-            <img src="<%= gato %>" alt="">
-            <img src="<%= cao %>" alt="">     
+                <img id="imagem" src="<%= gato %>" class="imagem"> 
+
             <script src="./public/script.js"></script>
     </main>
 </body>
