@@ -7,6 +7,7 @@ Dependências que devem ser baixadas para o programa funcionar:
 -Ejs
 -Express
 -Cors
+-Node
 
 Outras dependências baixadas:
 
